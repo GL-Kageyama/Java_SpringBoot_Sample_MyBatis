@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Spring Boot Sample MyBatis</title>
+</head>
+<body>
+	<!-- Title display -->
+	<h2>Customer Information</h2>
+	<form action="/get">
+		<td>Primary Key</td>
+		<!-- Primary key entry field -->
+		<input type="text" name="key"><br/>
+		<!-- Get button -->
+		<button type="submit">Get</button>
+	</form>
+	<p>----------------------------------------</p>
+	<!-- Customer information field -->
+  	<table>
+		<tr>
+			<th>Name</th>
+			<th>Address</th>
+			<th>Telno</th>
+		</tr>
+		<!-- Executed if the customerInfo variable has a value -->
+ 		<div th:if="${customerInfo}">
+			<tr>
+				<!-- Information retrieved from the DB -->
+				<td th:text="${customerInfo.cusName}"></td>
+				<td th:text="${customerInfo.cusAddress}"></td>
+				<td th:text="${customerInfo.cusTelno}"></td>
+			</tr>
+		</div>
+	</table>
+</body>
+</html>
