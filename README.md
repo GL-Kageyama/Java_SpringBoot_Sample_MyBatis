@@ -14,7 +14,7 @@ A sample of Spring Boot using MyBatis and MyBatis Generator.
 
 3, Execute the project.
 
-4, Access "http://localhost:8080/."
+4, Access "http://localhost:8080/"
 
 5, Enter the target number in the Primary Key field.
 
